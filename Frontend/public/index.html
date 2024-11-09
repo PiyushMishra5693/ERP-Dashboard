@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Portal</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Select Your Role</h2>
+        <div class="role-icons">
+            <div onclick="showLoginForm('admin')" class="role">
+                <img src="admin.png" alt="Admin Icon">
+                <p>Admin</p>
+            </div>
+            <div onclick="showLoginForm('sales-manager')" class="role">
+                <img src="sales.png" alt="Sales Manager Icon">
+                <p>Sales Manager</p>
+            </div>
+            <div onclick="showLoginForm('labour')" class="role">
+                <img src="labour.png" alt="Labour Icon">
+                <p>Labour</p>
+            </div>
+            <div onclick="showLoginForm('hr-department')" class="role">
+                <img src="hr.png" alt="HR Department Icon">
+                <p>HR Department</p>
+            </div>
+        </div>
+
+        
+        <div id="login-form-container" class="login-form-container">
+            <button class="back-btn" onclick="hideLoginForm()">Back</button>
+            <h3 id="login-title"></h3>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button>Login</button>
+            <p class="forgot-password" onclick="showForgotPassword()">Forgot Password?</p>
+            <p>Don't have an account? <span onclick="showSignUpForm()" style="color:#5a67d8; cursor:pointer;">Sign Up</span></p>
+        </div>
+
+    
+        <div id="sign-up-form-container" class="sign-up-form-container">
+            <button class="back-btn" onclick="hideSignUpForm()">Back</button>
+            <h3>Sign Up</h3>
+            <input id="signup-username" type="text" placeholder="Username" required>
+            <input id="signup-email" type="email" placeholder="Email (e.g., example@gmail.com)" required>
+            <input id="signup-password" type="password" placeholder="Password" required>
+            <input id="signup-dob" type="date" placeholder="Date of Birth" required>
+            <button onclick="submitSignUp()">Sign Up</button>
+            <p class="error-message" id="signup-error-message" style="display:none;"></p>
+        </div>
+
+
+        <div id="forgot-password-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="hideForgotPassword()">&times;</span>
+                <h3>Forgot Password</h3>
+                <p>Enter your email for verification:</p>
+                <input id="forgot-email" type="email" placeholder="Email" required>
+                <p id="error-message" class="error-message" style="display: none;">Please enter a valid Gmail address (e.g., example@gmail.com).</p>
+                <button onclick="verifyEmail()">Verify</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+*body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding-top: 20px;
+}
+
+#sidebar a {
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+#sidebar a:hover {
+    background-color: wheat;
+}
+
+#content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    background-color: #f4f6f9;
+    background-image: url('salesbg.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+

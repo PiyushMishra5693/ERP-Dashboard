@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>Admin Dashboard</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" id="manageSalesBtn"><i class="fas fa-users"></i> Manage Sales Managers</a></li>
+          <li><a href="#" id="manageLabourBtn"><i class="fas fa-hard-hat"></i> Manage Labours</a></li>
+          <li><a href="#" id="viewLocationsBtn"><i class="fas fa-map-marker-alt"></i> View Locations</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section id="manageSales" class="dashboard-section active">
+        <h3>Manage Sales Managers</h3>
+        <button class="add-btn" onclick="addSalesManager()">Add Sales Manager</button>
+        <div id="salesManagersList" class="list-container">
+        </div>
+      </section>
+
+      <section id="manageLabour" class="dashboard-section">
+        <h3>Manage Labours</h3>
+        <button class="add-btn" onclick="addLabour()">Add Labour</button>
+        <div id="laboursList" class="list-container">
+        </div>
+      </section>
+
+      <section id="viewLocations" class="dashboard-section">
+        <h3>View Locations</h3>
+        <button class="add-btn" onclick="addLocation()">Add Location</button>
+        <div id="locationsList" class="list-container">
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

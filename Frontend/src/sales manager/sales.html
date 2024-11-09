@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sales.css">
+</head>
+<body>
+
+<div id="sidebar">
+    <h2 class="text-center">Sales Manager Dashboard</h2>
+    <a href="#" id="taskManagementLink">Task Management</a>
+    <a href="#" id="labourManagementLink">Labour Management</a>
+    <a href="#" id="reportsLink">Reports</a>
+</div>
+
+<div id="content">
+    <div id="taskManagementSection">
+        <h3>Assigned Tasks</h3>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taskModal">Add New Task</button>
+        <ul id="taskList" class="mt-3 list-group"></ul>
+    </div>
+
+    <div id="labourManagementSection" class="hidden">
+        <h3>Labours in Area</h3>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#labourModal">Add New Labour</button>
+        <ul id="labourList" class="mt-3 list-group"></ul>
+    </div>
+
+    <div id="reportsSection" class="hidden">
+        <h3>Reports</h3>
+        <p>Generate and view reports here.</p>
+    </div>
+</div>
+
+<!-- Task Modal -->
+<div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="taskModalLabel">Add New Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="taskInput" class="form-control" placeholder="Enter task name">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addTask()">Add Task</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Labour Modal -->
+<div class="modal fade" id="labourModal" tabindex="-1" aria-labelledby="labourModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="labourModalLabel">Add New Labour</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="labourInput" class="form-control" placeholder="Enter labour name">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addLabour()">Add Labour</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="sales.js"></script>
+</body>
+</html>

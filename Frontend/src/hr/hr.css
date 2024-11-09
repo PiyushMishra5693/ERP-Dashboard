@@ -1,0 +1,76 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('HRbg.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed;
+    color: black;
+}
+
+/* Styling for the dashboard container */
+.dashboard {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    border-radius: 10px;
+}
+
+/* Styling for the main heading */
+h1 {
+    color: #fff;
+}
+
+/* Styling for each card container */
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for cards */
+}
+
+/* Input field styling */
+input {
+    padding: 10px;
+    margin: 5px 0;
+    width: 90%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button styling */
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .dashboard {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

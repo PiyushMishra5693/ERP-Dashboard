@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labour Dashboard</title>
+  <link rel="stylesheet" href="labour.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <nav class="sidebar">
+      <h2>Labour Dashboard</h2>
+      <ul>
+        <li><a href="#taskManagement">Task Management</a></li>
+        <li><a href="#labourManagement">Labour Management</a></li>
+        <li><a href="#reports">Reports</a></li>
+      </ul>
+    </nav>
+    
+
+    <main class="main-content">
+      <section id="taskManagement" class="card">
+        <h3>Task Management</h3>
+        <p>Manage and track tasks for labours</p>
+        <div class="card-content">
+          <h4>Assigned Tasks</h4>
+          <button onclick="openModal('taskModal')">Add New Task</button>
+        </div>
+      </section>
+
+      <section id="labourManagement" class="card">
+        <h3>Labour Management</h3>
+        <p>Manage your labour force details</p>
+        <div class="card-content">
+          <h4>Labour Overview</h4>
+          <button onclick="openModal('labourModal')">Add New Labour</button>
+        </div>
+      </section>
+
+      <section id="reports" class="card">
+        <h3>Reports</h3>
+        <p>Generate and view reports</p>
+        <div class="card-content">
+          <h4>Report Overview</h4>
+          <button onclick="generateReport()">Generate Report</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  
+  <div id="taskModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('taskModal')">&times;</span>
+      <h3>Add New Task</h3>
+      <form id="taskForm">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" name="taskName" required>
+        
+        <label for="taskDescription">Description:</label>
+        <textarea id="taskDescription" name="taskDescription" required></textarea>
+        
+        <button type="submit">Add Task</button>
+      </form>
+    </div>
+  </div>
+
+  
+  <div id="labourModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('labourModal')">&times;</span>
+      <h3>Add New Labour</h3>
+      <form id="labourForm">
+        <label for="labourName">Labour Name:</label>
+        <input type="text" id="labourName" name="labourName" required>
+        
+        <label for="labourRole">Role:</label>
+        <input type="text" id="labourRole" name="labourRole" required>
+        
+        <button type="submit">Add Labour</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="labour.js"></script>
+</body>
+</html>

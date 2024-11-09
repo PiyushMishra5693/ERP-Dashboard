@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard</title>
+    <link rel="stylesheet" href="hr.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>HR Dashboard</h1>
+        <div class="card" id="attendance">
+            <h2>Calculate Attendance</h2>
+            <input type="text" id="employeeId" placeholder="Enter Employee ID">
+            <button onclick="calculateAttendance()">Submit Attendance</button>
+            <p id="attendanceResult"></p>
+        </div>
+        <div class="card" id="salaries">
+            <h2>Calculate Salaries</h2>
+            <input type="text" id="salaryEmployeeId" placeholder="Enter Employee ID">
+            <input type="number" id="hoursWorked" placeholder="Enter Hours Worked">
+            <button onclick="calculateSalaries()">Calculate Salary</button>
+            <p id="salaryResult"></p>
+        </div>
+        <div class="card" id="labourTask">
+            <h2>Calculate Labour Task</h2>
+            <input type="text" id="taskId" placeholder="Enter Task ID">
+            <input type="number" id="taskHours" placeholder="Enter Task Hours">
+            <button onclick="calculateLabourTask()">Calculate Task</button>
+            <p id="taskResult"></p>
+        </div>
+    </div>
+    <script src="hr.js"></script>
+</body>
+</html>
